@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+        <h4>Created by {{userName}}</h4>
+        <hr>
+        <ul class="list-group">
+
+            <li (click)="toTask(i+1)"  *ngFor="let task of createdBy;let i=index" class="list-group-item home-list-item">
+                <div class="row align-items-center">
+                    <div class="col-2"><h2>{{i+1}}</h2></div>
+                    <div class="col-10" >
+                      <div class="row">
+                          {{task.name}}
+                      </div>
+                      <div class="row task-extra">
+                          <div class="col-4 p-0 task-ass">Assigned to: <br/> <span class="task-ass-user"> {{task.assigneeName}}</span></div>
+                          <div class="col-4 task-ass">Scheduled: <br/> <span class="task-ass-date"> {{task.scheduledDate.toString().split("T")[0]}}</span> </div>
+                          <div class="col-4 task-ass">End: <br/> <span class="task-ass-date"> {{task.endDate.toString().split("T")[0]}}</span> </div>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <a [routerLink]="['../tasks']">View More..</a>
+        </ul>
+        
+    </div>
+    <div class="col-6">
+        <h4>Assigned to {{userName}}</h4>
+        <hr>
+        <ul class="list-group">
+            <li (click)="toAssignedTask(i+1)"*ngFor="let task of assignedTo;let i=index" class="list-group-item home-list-item">
+                <div class="row align-items-center">
+                    <div class="col-2"><h2>{{i+1}}</h2></div>
+                    <div class="col-10" >
+                      <div class="row">
+                          {{task.name}}
+                      </div>
+                      <div class="row task-extra">
+                          <div class="col-4 p-0 task-ass">Created by: <br/> <span class="task-ass-user"> {{task.createdByName}}</span></div>
+                          <div class="col-4 task-ass">Scheduled: <br/> <span class="task-ass-date"> {{task.scheduledDate.toString().split("T")[0]}}</span> </div>
+                          <div class="col-4 task-ass">End: <br/> <span class="task-ass-date"> {{task.endDate.toString().split("T")[0]}}</span> </div>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!-- <a [routerLink]="['../tasks']">View More..</a> -->
+            <!-- //<a [routerLink]="['../tasks']">View More..</a> -->
+            <!-- <a [routerLink]="['/viewassigned/viewassigned.component.html']">View More..</a> -->
+            <a [routerLink]="['../viewassigned']" >View More..</a>
+        </ul>
+    </div>
+    <!-- <div class="col-4">
+        <h4>Completed Task</h4>
+        <hr>
+        <ul class="list-group">
+            <li class="list-group-item">Task1</li>
+        </ul>
+    </div> -->
+  </div>
+  
+</div>

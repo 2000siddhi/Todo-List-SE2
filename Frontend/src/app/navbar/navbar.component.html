@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" routerLink="" style="cursor: pointer">Todooo&#174;</a>
+
+  <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
+    <li class="nav-item" routerLinkActive="active" [routerLink]="['/home']">
+      <a class="nav-link" style="cursor: pointer">Home </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLink]="['/task']">
+      <a class="nav-link" style="cursor: pointer">Task </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLink]="['/project']">
+      <a class="nav-link" style="cursor: pointer">Project </a>
+    </li>
+    
+  </ul>
+
+  <div *ngIf="accountService.currentUser$ | async" class="my-2 my-lg-0 ml-auto">
+    <button
+      class="btn btn-danger my-2 my-sm-0"
+      (click)="accountService.logout()"
+    >
+      Logout as {{ name }}
+    </button>
+  </div>
+</nav>

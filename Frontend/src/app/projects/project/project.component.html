@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>{{ isEdit ? "Save" : "Add" }} Project</h1>
+  <form (ngSubmit)="processProject()" #addProjectForm="ngForm">
+    <div class="form-group">
+      <label for="projectName">Project Name:</label>
+      <input [(ngModel)]="projectName" type="text" name="projectName" id="projectName" class="form-control" required/>
+    </div>
+    <div class="form-group">
+      <label for="projectDescribe">Project Description:</label>
+      <input [(ngModel)]="projectDescribe" type="text" name="projectDescribe" id="projectDescribe" class="form-control" />
+    </div>
+    <button type="submit" [disabled]="!addProjectForm.valid" class="btn btn-success btn-md">{{ isEdit ? "Save" : "Add" }} </button>
+  </form>
+</div>

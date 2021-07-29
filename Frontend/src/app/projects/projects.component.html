@@ -1,0 +1,41 @@
+<!-- <p>tasks works!</p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="container-inline">
+        <h4 class="d-inline-block">Ongoing Projects</h4>
+        <button [hidden]="!editDialog" type="button" class="btn float-right btn-info btn-md" (click)="addProject()"> Add Project </button>
+      </div>
+      <hr />
+      <ul class="list-group">
+        <li
+          [ngClass]="{ 'active': id==i+1 }"
+          (click)="toProject(i + 1)"
+          *ngFor="let project of projects; let i = index"
+          class="list-group-item home-list-item"
+        >
+          <div class="row align-items-center">
+            <div class="col-2">
+              <h2>{{ i + 1 }}</h2>
+            </div>
+            <div class="col-8">
+              <div class="row">
+                {{ project.name }}
+              </div>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(project.id)">Delete</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+        
+      </div>
+    </div>
+
+    <div class="col-6">
+      <app-project [project]="selectedProject" [isEdit]="editDialog"> </app-project>
+    </div>
+  </div>
+</div>

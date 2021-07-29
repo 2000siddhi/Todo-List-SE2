@@ -1,0 +1,30 @@
+.task-extra {
+  font-size: small;
+}
+
+.task-ass {
+  font-weight: bold;
+}
+.task-ass-user {
+  color: green;
+  font-weight: bold;
+}
+
+.task-ass-date {
+  color: green;
+  font-size: bold;
+}
+
+.home-list-item:hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+.active {
+  background:honeydew !important;
+  color:black;
+}
+/* .active:active{
+    border: black;
+} */
+
