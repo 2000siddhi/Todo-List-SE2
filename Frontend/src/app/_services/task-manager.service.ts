@@ -58,7 +58,7 @@ export class TaskManagerService {
         window.location.reload();
       },
       (err)=>{
-        console.log(err);
+        ;
         
       }
     )
@@ -75,7 +75,7 @@ export class TaskManagerService {
         window.location.reload();
       },
       (err)=>{
-        console.log(err);
+        ;
         
       }
     )
@@ -92,7 +92,7 @@ export class TaskManagerService {
         window.location.reload();
       }, 
       (err)=>{
-        console.log(err);
+        ;
       }
     )
   }
@@ -111,7 +111,7 @@ export class TaskManagerService {
         window.location.reload();
       },
       (err)=>{
-        console.log(err);
+        ;
         
       }
     )

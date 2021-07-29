@@ -29,7 +29,7 @@ export class AccountService {
          this.router.navigate(['home']);
     },
       (error)=>{
-        console.log(error);
+        ;
         this.toastr.error(error.error);
       }
       );
@@ -56,7 +56,7 @@ export class AccountService {
             this.router.navigate(['landing']);
           },
           (error)=>{
-            console.log(error);
+            ;
             this.toastr.error(error.error);
           }
         );

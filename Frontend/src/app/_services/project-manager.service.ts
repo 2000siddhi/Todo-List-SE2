@@ -42,7 +42,7 @@ export class ProjectManagerService {
         window.location.reload();
       },
       (err)=>{
-        console.log(err);
+        ;
         
       }
     )
@@ -58,7 +58,7 @@ export class ProjectManagerService {
         this.toastr.success("Project Edited Successfully!");
       },
       (err)=>{
-        console.log(err);
+        ;
         
       }
     )
@@ -78,7 +78,7 @@ export class ProjectManagerService {
        window.location.reload();
       },
       (err)=>{
-        console.log(err);
+        ;
         this.toastr.warning("Task is assigned to project ,You cannot delete this project!");
       }
     )

@@ -27,7 +27,6 @@ export class ProjectsComponent implements OnInit {
 
   toProject (id:number) {
     this.id=id;
-    //console.log(this.id);
     this.selectedProject = this.projects[id-1];
     this.editDialog = true;
   }
@@ -38,12 +37,10 @@ export class ProjectsComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    // if(confirm("Are you sure you want to delete project ?")) {
       if(confirm("Are you sure you want to delete task ?")){
       this.id=id;
       this.projectService.deleteProject(id);
       }
-    // }
   }
 
 }
